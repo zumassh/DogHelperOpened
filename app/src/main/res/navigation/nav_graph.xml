@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/openingFragment">
+
+    <fragment
+        android:id="@+id/openingFragment"
+        android:name="com.example.doghelper.opening"
+        android:label="fragment_opening"
+        tools:layout="@layout/fragment_opening" >
+        <action
+            android:id="@+id/action_openingFragment_to_entrance"
+            app:destination="@id/entrance" />
+        <action
+            android:id="@+id/action_openingFragment_to_registration"
+            app:destination="@id/registration" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.doghelper.menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_choosing_pet"
+            app:destination="@id/choosing_pet" />
+        <action
+            android:id="@+id/action_menuFragment_to_documents_menu"
+            app:destination="@id/documents_menu" />
+        <action
+            android:id="@+id/action_menuFragment_to_diary"
+            app:destination="@id/diary" />
+        <action
+            android:id="@+id/action_menuFragment_to_commands_menu"
+            app:destination="@id/commands_menu" />
+        <action
+            android:id="@+id/action_menuFragment_to_competitions_list"
+            app:destination="@id/competitions_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_note"
+        android:name="com.example.doghelper.add_note"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_add_note_to_notes"
+            app:destination="@id/notes" />
+    </fragment>
+    <fragment
+        android:id="@+id/choosing_pet"
+        android:name="com.example.doghelper.choosing_pet"
+        android:label="fragment_choosing_pet"
+        tools:layout="@layout/fragment_choosing_pet" >
+        <action
+            android:id="@+id/action_choosing_pet_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commands_menu"
+        android:name="com.example.doghelper.commands_menu"
+        android:label="fragment_commands_menu"
+        tools:layout="@layout/fragment_commands_menu" >
+        <action
+            android:id="@+id/action_commands_menu_to_planned_commands"
+            app:destination="@id/planned_commands" />
+        <action
+            android:id="@+id/action_commands_menu_to_learned_commands"
+            app:destination="@id/learned_commands" />
+        <action
+            android:id="@+id/action_commands_menu_to_inprocess_commands"
+            app:destination="@id/inprocess_commands" />
+        <action
+            android:id="@+id/action_commands_menu_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/competition_card"
+        android:name="com.example.doghelper.competition_card"
+        android:label="fragment_competition_card"
+        tools:layout="@layout/fragment_competition_card" >
+        <action
+            android:id="@+id/action_competition_card_to_competitions_list"
+            app:destination="@id/competitions_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/competitions_list"
+        android:name="com.example.doghelper.competitions_list"
+        android:label="fragment_competitions_list"
+        tools:layout="@layout/fragment_competitions_list" >
+        <action
+            android:id="@+id/action_competitions_list_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_competitions_list_to_competition_card"
+            app:destination="@id/competition_card" />
+    </fragment>
+    <fragment
+        android:id="@+id/diary"
+        android:name="com.example.doghelper.diary"
+        android:label="fragment_diary"
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_diary_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_diary_to_notes"
+            app:destination="@id/notes" />
+        <action
+            android:id="@+id/action_diary_to_photogallery"
+            app:destination="@id/photogallery" />
+        <action
+            android:id="@+id/action_diary_to_videogallery"
+            app:destination="@id/videogallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/document_family"
+        android:name="com.example.doghelper.document_family"
+        android:label="fragment_document_family"
+        tools:layout="@layout/fragment_document_family" >
+        <action
+            android:id="@+id/action_document_family_to_documents_menu"
+            app:destination="@id/documents_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/document_registration"
+        android:name="com.example.doghelper.document_registration"
+        android:label="fragment_document_registration"
+        tools:layout="@layout/fragment_document_registration" >
+        <action
+            android:id="@+id/action_document_registration_to_documents_menu"
+            app:destination="@id/documents_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/documents_menu"
+        android:name="com.example.doghelper.documents_menu"
+        android:label="fragment_documents_menu"
+        tools:layout="@layout/fragment_documents_menu" >
+        <action
+            android:id="@+id/action_documents_menu_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_documents_menu_to_vetpassport_menu"
+            app:destination="@id/vetpassport_menu" />
+        <action
+            android:id="@+id/action_documents_menu_to_metrica_menu"
+            app:destination="@id/metrica_menu" />
+        <action
+            android:id="@+id/action_documents_menu_to_document_family"
+            app:destination="@id/document_family" />
+        <action
+            android:id="@+id/action_documents_menu_to_document_registration"
+            app:destination="@id/document_registration" />
+    </fragment>
+    <fragment
+        android:id="@+id/entrance"
+        android:name="com.example.doghelper.entrance"
+        android:label="fragment_entrance"
+        tools:layout="@layout/fragment_entrance" >
+        <action
+            android:id="@+id/action_entrance_to_openingFragment"
+            app:destination="@id/openingFragment" />
+        <action
+            android:id="@+id/action_entrance_to_choosing_pet"
+            app:destination="@id/choosing_pet" />
+    </fragment>
+    <fragment
+        android:id="@+id/inprocess_commands"
+        android:name="com.example.doghelper.inprocess_commands"
+        android:label="fragment_inprocess_commands"
+        tools:layout="@layout/fragment_inprocess_commands" >
+        <action
+            android:id="@+id/action_inprocess_commands_to_commands_menu"
+            app:destination="@id/commands_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/learned_commands"
+        android:name="com.example.doghelper.learned_commands"
+        android:label="fragment_learned_commands"
+        tools:layout="@layout/fragment_learned_commands" >
+        <action
+            android:id="@+id/action_learned_commands_to_commands_menu"
+            app:destination="@id/commands_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/planned_commands"
+        android:name="com.example.doghelper.planned_commands"
+        android:label="fragment_planned_commands"
+        tools:layout="@layout/fragment_planned_commands" >
+        <action
+            android:id="@+id/action_planned_commands_to_commands_menu"
+            app:destination="@id/commands_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/metrica"
+        android:name="com.example.doghelper.metrica"
+        android:label="fragment_metrica"
+        tools:layout="@layout/fragment_metrica" >
+        <action
+            android:id="@+id/action_metrica_to_metrica_menu"
+            app:destination="@id/metrica_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/metrica_menu"
+        android:name="com.example.doghelper.metrica_menu"
+        android:label="fragment_metrica_menu"
+        tools:layout="@layout/fragment_metrica_menu" >
+        <action
+            android:id="@+id/action_metrica_menu_to_metrica"
+            app:destination="@id/metrica" />
+        <action
+            android:id="@+id/action_metrica_menu_to_documents_menu"
+            app:destination="@id/documents_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/notes"
+        android:name="com.example.doghelper.notes"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notes_to_diary"
+            app:destination="@id/diary" />
+        <action
+            android:id="@+id/action_notes_to_add_note"
+            app:destination="@id/add_note" />
+    </fragment>
+    <fragment
+        android:id="@+id/photogallery"
+        android:name="com.example.doghelper.photogallery"
+        android:label="fragment_photogallery"
+        tools:layout="@layout/fragment_photogallery" >
+        <action
+            android:id="@+id/action_photogallery_to_diary"
+            app:destination="@id/diary" />
+    </fragment>
+    <fragment
+        android:id="@+id/videogallery"
+        android:name="com.example.doghelper.videogallery"
+        android:label="fragment_videogallery"
+        tools:layout="@layout/fragment_videogallery" >
+        <action
+            android:id="@+id/action_videogallery_to_diary"
+            app:destination="@id/diary" />
+    </fragment>
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.example.doghelper.registration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registration_to_openingFragment"
+            app:destination="@id/openingFragment" />
+        <action
+            android:id="@+id/action_registration_to_choosing_pet"
+            app:destination="@id/choosing_pet" />
+    </fragment>
+    <fragment
+        android:id="@+id/vetpassport_menu"
+        android:name="com.example.doghelper.vetpassport_menu"
+        android:label="fragment_vetpassport_menu"
+        tools:layout="@layout/fragment_vetpassport_menu" >
+        <action
+            android:id="@+id/action_vetpassport_menu_to_documents_menu"
+            app:destination="@id/documents_menu" />
+        <action
+            android:id="@+id/action_vetpassport_menu_to_vetpassport_page1"
+            app:destination="@id/vetpassport_page1" />
+    </fragment>
+    <fragment
+        android:id="@+id/vetpassport_page1"
+        android:name="com.example.doghelper.vetpassport_page1"
+        android:label="fragment_vetpassport_page1"
+        tools:layout="@layout/fragment_vetpassport_page1" >
+        <action
+            android:id="@+id/action_vetpassport_page1_to_vetpassport_page2"
+            app:destination="@id/vetpassport_page2" />
+        <action
+            android:id="@+id/action_vetpassport_page1_to_vetpassport_menu"
+            app:destination="@id/vetpassport_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/vetpassport_page2"
+        android:name="com.example.doghelper.vetpassport_page2"
+        android:label="fragment_vetpassport_page2"
+        tools:layout="@layout/fragment_vetpassport_page2" >
+        <action
+            android:id="@+id/action_vetpassport_page2_to_vetpassport_page3"
+            app:destination="@id/vetpassport_page3" />
+        <action
+            android:id="@+id/action_vetpassport_page2_to_vetpassport_page1"
+            app:destination="@id/vetpassport_page1" />
+    </fragment>
+    <fragment
+        android:id="@+id/vetpassport_page3"
+        android:name="com.example.doghelper.vetpassport_page3"
+        android:label="fragment_vetpassport_page3"
+        tools:layout="@layout/fragment_vetpassport_page3" >
+        <action
+            android:id="@+id/action_vetpassport_page3_to_vetpassport_page2"
+            app:destination="@id/vetpassport_page2" />
+    </fragment>
+</navigation>

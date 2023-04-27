@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vetpassport_page1"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/int_passport"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="44dp"
+        android:background="@color/medium_mint"
+        android:gravity="center"
+        android:text="@string/international_vetpasport"
+        android:textColor="@color/text"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/owner"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="132dp"
+        android:background="@color/medium_mint"
+        android:gravity="center"
+        android:text="@string/owner"
+        android:textColor="@color/text"
+        android:textSize="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/index"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:gravity="center"
+        android:hint="@string/index"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/house"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:hint="@string/house"
+        app:layout_constraintEnd_toStartOf="@+id/flat"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/flat"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:gravity="center"
+        android:hint="@string/flat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/street"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="272dp"
+        android:gravity="center"
+        android:hint="@string/street"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/owner_surname"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:gravity="center"
+        android:hint="@string/owner_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/owner_name"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="@string/owner_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/county"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:gravity="center"
+        android:hint="@string/county"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:gravity="center"
+        android:hint="@string/city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+    <Button
+        android:id="@+id/save_owner"
+        android:layout_width="204dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/medium_mint"
+        android:text="@string/save"
+        android:textColor="@color/text"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next_to_describe"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="@color/brown"
+        android:text="@string/next"
+        android:textColor="@color/light_mint"
+        android:textSize="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
